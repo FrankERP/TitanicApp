@@ -12,6 +12,8 @@ useLayoutEffect(() => {
 }, [])
 
   return (
+
+    
     <SafeAreaView>
       <View>
         <Text>FirstScreen</Text>
