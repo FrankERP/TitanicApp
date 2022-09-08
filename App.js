@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import FirstScreen from './screens/FirstScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
         <TailwindProvider>
           <Stack.Navigator>
             <Stack.Screen name='Home' component={HomeScreen}/>
+            <Stack.Screen name='First' component={FirstScreen}/>
           </Stack.Navigator>
         </TailwindProvider>
       </Provider>
