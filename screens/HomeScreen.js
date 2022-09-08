@@ -15,6 +15,7 @@ export default function HomeScreen() {
     <View>
       <Text>HomeScreen</Text>
       <Text>Texto para probar commit</Text>
+      <Text>Texto para probar commit Jorge</Text>
     </View>
   )
 }
