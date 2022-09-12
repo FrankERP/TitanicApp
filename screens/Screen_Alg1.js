@@ -1,10 +1,32 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
+import React, { useLayoutEffect } from 'react'
+import { useNavigation } from '@react-navigation/native';
+import { ArrowLeftIcon } from 'react-native-heroicons/solid';
+
 
 export default function Screen_Alg1() {
+
+  const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [])
+
   return (
-    <View>
-      <Text>Screen_Alg1</Text>
-    </View>
+    <SafeAreaView className='bg-gray-900 flex-1 pt-8'>
+      <View>
+        <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
+          <View>
+            <Text className='text-lg font-bold text-center text-gray-50'>Screen_Alg1</Text>
+          </View>
+          <TouchableOpacity onPress={navigation.goBack} 
+            className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600 rounded-full'>
+              <ArrowLeftIcon size={20} color='#AF00CC'/>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
   )
 }
