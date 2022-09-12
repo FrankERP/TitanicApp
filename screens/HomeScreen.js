@@ -50,8 +50,8 @@ export default function HomeScreen() {
 
 
   return (
-    <SafeAreaView className='bg-white pt-10'>
-      <ScrollView className='bg-black flex-1 ' 
+    <SafeAreaView className='bg-gray-900 pt-10'>
+      <ScrollView className='bg-gray-900 flex-1 ' 
         contentContainerStyle={{
           paddingBottom:200,
         }}>
