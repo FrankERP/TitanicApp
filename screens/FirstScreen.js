@@ -12,7 +12,7 @@ useLayoutEffect(() => {
 }, [])
 
   return (
-    <SafeAreaView>
+    <SafeAreaView className='pt-10 items-center'>
       <View>
         <Text>FirstScreen</Text>
         <Text>imagen barco hundiéndose</Text>
@@ -23,7 +23,6 @@ useLayoutEffect(() => {
       <TouchableOpacity onPress={() => navigation.navigate('Home')} className='w-20 h-20 rounded bg-red-600'>
         <Text className='text-base text-white'>Start</Text>
       </TouchableOpacity>
-      
     </SafeAreaView>
   )
 }
