@@ -53,7 +53,7 @@ export default function HomeScreen() {
     <SafeAreaView className='bg-white pt-10'>
       <ScrollView className='bg-black flex-1 ' 
         contentContainerStyle={{
-          paddingBottom:350,
+          paddingBottom:200,
         }}>
         <View className='p-2 m-4 '>
           <Text className='mb-3 mx-8 text-2xl text-white text-center'>Competencia Titanic Machine Learning</Text>
@@ -61,7 +61,7 @@ export default function HomeScreen() {
           <Text className='text-sm text-justify text-fuchsia-200'>Es importante lograr un porcentaje alto de predicción, ya que, este tipo de eventos ocurre no solo con barcos, también, en aviones, trenes, naves espaciales, entre otros transportes. Además, puede ayudar a mejorar la seguridad en otros casos como terremotos, huracanes, deslaves y muchos otros desastres naturales. Aunque, los parámetros pueden cambiar, los modelos suelen ser parecidos o al menos es una forma de acercamiento a la resolución del problema.</Text>
         </View>
         <View className='m-6'>
-          <Text className='mb-3 mx-8 text-xl text-white text-center'>Equipo 1</Text>
+          <Text className='mb-3 mx-8 text-xl text-white text-center'>App Developers:</Text>
           <View className='flex-row'>
             <Text className='mb-3 text-sm text-fuchsia-200'>Jorge Gerardo Iglesias Ortiz</Text>
             <Text className='mb-3 mx-2 text-sm  text-fuchsia-200'>A01653261</Text>
@@ -75,14 +75,15 @@ export default function HomeScreen() {
             <Text className='mb-3 mx-2 text-sm text-fuchsia-200'>A01658142</Text>
           </View>
         </View>
-        {/*FloatIcon */}
-        <View className='absolute pt-[750px] pl-[380px]'>
+        
+      </ScrollView>
+      {/*FloatIcon */}
+      <View className='absolute pt-[850px] pl-[380px]'>
           <FloatingAction
             actions= {actions}
             color='#8700CB'
           /> 
         </View>
-      </ScrollView>
     </SafeAreaView>
   )
 }
