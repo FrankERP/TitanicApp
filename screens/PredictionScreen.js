@@ -15,15 +15,20 @@ export default function PredictionScreen() {
   const navigation = useNavigation();
 
   const [selected, setSelected] = useState('')
+  const [sex,setSex] = useState('')
 
   const data=[
-    {key:'1', value:'Mr'},
-    {key:'2', value:'Mrs'},
-    {key:'3', value:'Miss'},
-    {key:'4', value:'Master'},
+    {key:'1', value:'mr'},
+    {key:'2', value:'mrs'},
+    {key:'3', value:'miss'},
+    {key:'4', value:'master'},
     {key:'5', value:'VIP'},
   ]
 
+  const data_sex=[
+    {key:'1', value:'male'},
+    {key:'2', value:'female'},
+  ]
 
 
   useLayoutEffect(() => {
@@ -46,24 +51,37 @@ export default function PredictionScreen() {
         </View>
       </View>
       <Formik initialValues = {{
-        sepalLength: '',
-        sepalWidth:'',
-        petalLength: '',
-        petalWidth: ''
+        Sex: '',
+        Title:'',
+        Age: '',
+        Fare: '',
+        Relatives: ''
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
           axios.post('http://10.48.187.54:5000/predict',{
-            sepalLength: values.sepalLength,
-            sepalWidth: values.sepalWidth,
-            petalLength: values.petalLength,
-            petalWidth: values.petalWidth,
+            Sex: values.Sex,
+            Title: values.Title,
+            Age: values.Age,
+            Fare: values.Fare,
+            Relatives: values.Relatives,
           }).then(response => {setPrediction(response.data)}).catch(error => {console.log(error)})}
 
       >
         {({handleChange,handleBlur, handleSubmit, values})=> (
           <View>
             <View>
+            <SelectList 
+                data={data_sex} 
+                setSelected={setSex}
+                boxStyles={{backgroundColor: 'black'}}
+                dropdownTextStyles={{color:'#AF00CC'}}
+                boxTextSyles={{color:'#AF00CC'}}
+
+                inputStyles={{color:'#AF00CC'}}
+                placeholder='Select your gender'
+                onSelect={()=>{values.Sex = sex}}
+                />
               <SelectList 
                 data={data} 
                 setSelected={setSelected}
@@ -77,34 +95,26 @@ export default function PredictionScreen() {
                 />
             </View>
             <TextInput className='bg-gray-800'
-              onChangeText = {handleChange('sepalLength')}
-              onBlur={handleBlur('sepalLength')}
-              vaue = {values.sepalLength}
-              placeholder = 'sepalLength'
+              onChangeText = {handleChange('Age')}
+              onBlur={handleBlur('Age')}
+              vaue = {values.Age}
+              placeholder = 'Age'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
             />
             <TextInput className='bg-gray-700'
-              onChangeText = {handleChange('sepalWidth')}
-              onBlur={handleBlur('sepalWidth')}
-              vaue = {values.sepalWidth}
-              placeholder = 'sepalWidth'
+              onChangeText = {handleChange('Fare')}
+              onBlur={handleBlur('Fare')}
+              vaue = {values.Fare}
+              placeholder = 'Fare'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
             />
             <TextInput className='bg-gray-800'
-              onChangeText = {handleChange('petalLength')}
-              onBlur={handleBlur('petalLength')}
-              vaue = {values.petalLength}
-              placeholder = 'petalLength'
-              placeholderTextColor={'#AF00CC'}
-              theme={{colors:{text:'#E381C7'}}}
-            />
-            <TextInput className='bg-gray-700 text-fuchsia-200'
-              onChangeText = {handleChange('petalWidth')}
-              onBlur={handleBlur('petalWidth')}
-              vaue = {values.petalWidth}
-              placeholder = 'petalWidth'
+              onChangeText = {handleChange('Relatives')}
+              onBlur={handleBlur('Relatives')}
+              vaue = {values.Relatives}
+              placeholder = 'Relatives'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
             />
