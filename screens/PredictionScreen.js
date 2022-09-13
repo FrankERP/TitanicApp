@@ -18,16 +18,16 @@ export default function PredictionScreen() {
   const [sex,setSex] = useState('')
 
   const data=[
-    {key:'1', value:'mr'},
+    {key:'0', value:'mr'},
     {key:'2', value:'mrs'},
-    {key:'3', value:'miss'},
-    {key:'4', value:'master'},
-    {key:'5', value:'VIP'},
+    {key:'1', value:'miss'},
+    {key:'3', value:'master'},
+    {key:'4', value:'VIP'},
   ]
 
   const data_sex=[
-    {key:'1', value:'male'},
-    {key:'2', value:'female'},
+    {key:'0', value:'male'},
+    {key:'1', value:'female'},
   ]
 
 
@@ -59,7 +59,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://172.20.10.13:5000/predict',{
+          axios.post('http://192.168.0.21:5000/predict',{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,

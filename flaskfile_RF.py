@@ -36,22 +36,18 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
     resp = request.get_json().values()
-    # Modifiquen como llegan los valores aqui
     str_features = [str(x) for x in resp]
-    Sex = int(1 if (str_features[0]).lower() == 'female' else 0)
+    Sex = int(str_features[0])
     Age = pd.DataFrame(np.array([[float(str_features[2])]],dtype='float')).to_numpy(dtype=np.float32).reshape(-1,1)
     Age = int(sortFare(ageCat.predict(Age))[0])
     Pclass = int(knn.predict([[Age,float(str_features[3])]])[0])
     Fare = pd.DataFrame(np.array([[float(str_features[3])]],dtype='float')).to_numpy(dtype=np.float32).reshape(-1,1)
     Fare = int(sortFare(fareCat.predict(Fare))[0])
-    Title = int(0 if (str_features[1].lower() == 'mr') else 
-                (1 if (str_features[1].lower() == 'miss') else 
-                (2 if (str_features[1].lower() == 'mrs') else 
-                (3 if  (str_features[1].lower() == 'master') else 4))))
+    Title = int(str_features[1])
     Relatives = int(str_features[4])
     final_features = np.array([Pclass,Sex,Relatives,Title]).reshape(1,-1)
     prediction = RF.predict(final_features)
     return str(prediction[0])
 
 if __name__ == "__main__":
-    app.run('172.20.10.13')
+    app.run('192.168.0.21')
