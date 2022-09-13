@@ -78,17 +78,17 @@ export default function HomeScreen() {
           // onPress={() => Linking.openURL('https://github.com/')}
           className='flex-row'>
             <Text className='mb-3 text-base text-fuchsia-200'>Jorge Gerardo Iglesias Ortiz</Text>
-            <Text className='mb-3 mx-2 text-base  text-fuchsia-200'>A01653261</Text>
+            <Text className='mb-3 mx-2 text-base  text-fuchsia-200'>          A01653261</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => Linking.openURL('https://github.com/FrankERP')}
           className='flex-row'>
             <Text className='mb-3 text-base text-fuchsia-200'>Francisco Emiliano Rocha Pineda</Text>
-            <Text className='mb-3 mx-2 text-base text-fuchsia-200'>A01652082</Text>
+            <Text className='mb-3 mx-2 text-base text-fuchsia-200'> A01652082</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => Linking.openURL('https://github.com/a01658142')}
           className='flex-row'>
             <Text className='mb-3 text-base text-fuchsia-200'>Jorge Antonio Hoyo García</Text>
-            <Text className='mb-3 mx-2 text-base text-fuchsia-200'>A01658142</Text>
+            <Text className='mb-3 mx-2 text-base text-fuchsia-200'>            A01658142</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => Linking.openURL('https://github.com/FrankERP/TitanicApp')}
           className='w-36 h-36 mt-6  bg-transparent self-center items-center pt-5 rounded-full border border-white'>

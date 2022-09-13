@@ -36,7 +36,6 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
     resp = request.get_json().values()
-    # Modifiquen como llegan los valores aqui
     str_features = [str(x) for x in resp]
     Sex = int(str_features[0])
     Age = pd.DataFrame(np.array([[float(str_features[2])]],dtype='float')).to_numpy(dtype=np.float32).reshape(-1,1)

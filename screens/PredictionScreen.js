@@ -16,6 +16,7 @@ export default function PredictionScreen() {
 
   const [selected, setSelected] = useState('')
   const [sex,setSex] = useState('')
+  const [model,setModel] = useState('')
 
   const data=[
     {key:'0', value:'mr'},
@@ -30,6 +31,16 @@ export default function PredictionScreen() {
     {key:'1', value:'female'},
   ]
 
+  const datalink=[
+    {key:'RF', value:'Random Forest'},
+    {key:'NN', value:'Neural Networks'},
+  ]
+
+  const linkdict = {
+    'RF' : 'Random Forest',
+    'NN' : 'Neural Networks',
+    '' : '(Select model first)'
+  }
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -42,7 +53,7 @@ export default function PredictionScreen() {
       <View>
         <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
           <View>
-            <Text className='text-lg font-bold text-center text-gray-50'>Random Forest Prediction</Text>
+            <Text className='text-lg font-bold text-center text-gray-50'>{linkdict[model]} Prediction</Text>
           </View>
           <TouchableOpacity onPress={navigation.goBack} 
             className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600 rounded-full'>
@@ -59,7 +70,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://10.48.186.242:5000/predict',{
+          axios.post('http://192.168.0.21:5000/predict'+model,{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,
@@ -71,6 +82,16 @@ export default function PredictionScreen() {
         {({handleChange,handleBlur, handleSubmit, values})=> (
           <View>  
             <View>
+            <SelectList 
+                data={datalink} 
+                setSelected={setModel}
+                boxStyles={{backgroundColor: 'black'}}
+                dropdownTextStyles={{color:'#AF00CC'}}
+                boxTextSyles={{color:'#AF00CC'}}
+
+                inputStyles={{color:'#AF00CC'}}
+                placeholder='Select your model'
+                />
             <SelectList 
                 data={data_sex} 
                 setSelected={setSex}
@@ -121,7 +142,7 @@ export default function PredictionScreen() {
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
 
-            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction}</Text>
+            <Text className='text-xl text-fuchsia-200'>{prediction}</Text>
           </View>
         ) }
       </Formik> 
