@@ -12,7 +12,7 @@ export default function HomeScreen() {
   // boton navegador
   const actions = [
     {
-      text: "Prediction",
+      text: "Predicción",
       icon: <FaceSmileIcon size={30} color='#fff'
       onPress={()=>navigation.navigate('PredictionScreen')}/>,
       name: "bt_alergy",
@@ -36,7 +36,7 @@ export default function HomeScreen() {
       color: '#8700CB'
     },
     {
-      text: "Selection",
+      text: "Selección Mejor Algoritmo",
       icon: <LifebuoyIcon size={30} color='white'
       onPress={()=>navigation.navigate('SelectionScreen')}/>,
       name: "bt_videocam",
