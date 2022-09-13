@@ -1,10 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
 
 export default function PredictionScreen() {
   return (
-    <View>
-      <Text>PredictionScreen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>PredictionScreen</Text>
+      </View>
+    </SafeAreaView>
   )
 }
