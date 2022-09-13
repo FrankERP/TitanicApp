@@ -43,7 +43,7 @@ export default function Screen_Alg1() {
           className='h-[310px] w-[310px] rounded self-center'/>
 
           <Text className='mx-8 mb-2 mt-4 text-base text-gray-50'>ROC y AUC</Text>
-          <Text className='mt-1 mb-3 text-sm text-justify text-fuchsia-200'>La curva ROC nos muestra que tenemos un ritmo de tasa positiva cerccano a la izquierda, esto indica que es un buen modelo predictivo. El área bajo la curva (AUC) es 0.82 lo que muestra un nivel de alta especificidad y alto nivel de sensitividad en el modelo.</Text>
+          <Text className='mt-1 mb-3 text-sm text-justify text-fuchsia-200'>La curva ROC nos muestra que tenemos un ritmo de tasa positiva cercano a la izquierda, esto indica que es un buen modelo predictivo. El área bajo la curva (AUC) es 0.82 lo que muestra un nivel de alta especificidad y alto nivel de sensitividad en el modelo.</Text>
           <Image source={require('../assets/NN_ROC_y_AUC.png')}
           className='h-[270px] w-[340px] rounded self-center'/>
 

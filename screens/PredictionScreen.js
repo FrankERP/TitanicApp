@@ -42,7 +42,7 @@ export default function PredictionScreen() {
       <View>
         <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
           <View>
-            <Text className='text-lg font-bold text-center text-gray-50'>Prediction Screen</Text>
+            <Text className='text-lg font-bold text-center text-gray-50'>Random Forest Prediction</Text>
           </View>
           <TouchableOpacity onPress={navigation.goBack} 
             className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600 rounded-full'>
@@ -59,7 +59,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://192.168.1.91:5000/predict',{
+          axios.post('http://10.48.186.242:5000/predict',{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,
@@ -121,7 +121,7 @@ export default function PredictionScreen() {
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
 
-            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction} {prediction==''?' ':(prediction == 1? 'Survived': 'Dead') }</Text>
+            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction}</Text>
           </View>
         ) }
       </Formik> 
