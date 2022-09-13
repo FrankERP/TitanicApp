@@ -27,8 +27,9 @@ def predict():
     final_features = np.array(int_values).reshape(1,-1)
     prediction = model.predict(final_features)
     print(prediction[0])
+    
     return str(prediction[0]) #render_template('index.html', prediction_text='Predicted Category {}'.format(prediction))
 
 
 if __name__ == "__main__":
-    app.run('10.48.184.48')
+    app.run('10.48.187.54')
