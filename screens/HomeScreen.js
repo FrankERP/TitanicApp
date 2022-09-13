@@ -72,7 +72,7 @@ export default function HomeScreen() {
           <Text className='text-sm text-justify text-fuchsia-200'>Es importante lograr un porcentaje alto de predicción, ya que este tipo de eventos ocurre no solo con barcos, también, en aviones, trenes, naves espaciales, entre otros transportes. Además, puede ayudar a predecir y mejorar la seguridad en otros casos como terremotos, huracanes, deslaves u otros desastres naturales. Aunque, los parámetros pueden cambiar, los modelos suelen ser parecidos o al menos es una forma de acercamiento a la resolución del problema.</Text>
         </View>
         <View className='m-6'>
-          <Text className='mt-3 text-xl text-white text-justify'>Para navegar en la App dar clic al botón "+" y después al desplegar las opciones, tocar el ícono de tu selección.</Text>
+          <Text className='my-5 text-base text-white text-justify'>Para navegar en la App dar clic al botón "+" y después al desplegar las opciones, tocar el ícono de tu selección.</Text>
           <Text className='mb-3 text-xl text-white text-center'>App Developers (clic name for github):</Text>
           <TouchableOpacity 
           // onPress={() => Linking.openURL('https://github.com/')}
