@@ -48,7 +48,7 @@ def predict():
     Relatives = int(str_features[4])
     final_features = np.array([Pclass,Sex,Relatives,Title]).reshape(1,-1)
     prediction = nn.predict(final_features)
-    return str(prediction[0])
+    return 'Survived' if str(prediction[0]) =='1' else 'Dead'
 
 if __name__ == "__main__":
     app.run('192.168.0.21')
