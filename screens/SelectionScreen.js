@@ -35,7 +35,7 @@ export default function SelectionScreen() {
           size={30} color='#AF00CC'/>
         </TouchableOpacity>
         <Image source={require('../assets/rfres.jpg')}
-          className='h-[120px] w-[310px] rounded-none self-center'/>
+          className='h-[120px] w-[310px] rounded self-center'/>
         
         <TouchableOpacity onPress={()=>navigation.navigate('Screen_Alg1')}
         className='flex-row p-1 mx-3 items-center'>
@@ -43,7 +43,7 @@ export default function SelectionScreen() {
           <DocumentPlusIcon size={30} color='#AF00CC'/>
         </TouchableOpacity>
         <Image source={require('../assets/nnres.jpg')}
-          className='h-[120px] w-[310px] rounded-none self-center'/>
+          className='h-[120px] w-[310px] rounded self-center'/>
         
       </ScrollView>
     </SafeAreaView>
