@@ -57,7 +57,7 @@ export default function HomeScreen() {
       <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
         <Text className='mb-1 mx-10 text-2xl text-gray-50 text-center'>Competencia Titanic Machine Learning</Text>
           <TouchableOpacity className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600  rounded-full' 
-            onPress={navigation.goBack}>
+            onPress={()=>navigation.navigate('FirstScreen')}>
             <ArrowLeftIcon size={20} color='#AF00CC'/>
           </TouchableOpacity>
       </View>   
@@ -104,6 +104,7 @@ export default function HomeScreen() {
           <FloatingAction
             actions= {actions}
             color='#8700CB'
+            showBackground= {false}
           /> 
         </View>
     </SafeAreaView>
