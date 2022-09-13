@@ -91,7 +91,7 @@ export default function PredictionScreen() {
 
                 inputStyles={{color:'#AF00CC'}}
                 placeholder='Select your title'
-                onSelect={()=>{values.sepalWidth = selected}}
+                onSelect={()=>{values.Title = selected}}
                 />
             </View>
             <TextInput className='bg-gray-800'
@@ -120,7 +120,8 @@ export default function PredictionScreen() {
             />
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
-            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction}</Text>
+
+            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction == 1? 'Survived': 'Dead' }</Text>
           </View>
         ) }
       </Formik>
