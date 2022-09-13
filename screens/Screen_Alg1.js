@@ -27,6 +27,13 @@ export default function Screen_Alg1() {
           </TouchableOpacity>
         </View>
       </View>
+      <ScrollView>
+        <View>
+          <Text>
+            
+          </Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }
