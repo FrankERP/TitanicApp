@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, Linking 
 import React, {useLayoutEffect} from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FloatingAction } from 'react-native-floating-action';
-import { DocumentMagnifyingGlassIcon, FaceSmileIcon, LifebuoyIcon } from 'react-native-heroicons/solid';
+import { DocumentCheckIcon, DocumentMagnifyingGlassIcon, FaceSmileIcon } from 'react-native-heroicons/outline';
 import { ArrowLeftIcon } from 'react-native-heroicons/outline'
 
 export default function HomeScreen() {
@@ -13,11 +13,11 @@ export default function HomeScreen() {
   const actions = [
     {
       text: "Predicción",
-      icon: <FaceSmileIcon size={30} color='#fff'
+      icon: <FaceSmileIcon size={30} color='white'
       onPress={()=>navigation.navigate('PredictionScreen')}/>,
       name: "bt_alergy",
       position: 1,
-      color: '#8700CB'
+      color: '#AF00CC',
     },
     {
       text: "Algoritmo 1",
@@ -25,7 +25,7 @@ export default function HomeScreen() {
       onPress={()=>navigation.navigate('Screen_Alg1')}/>,
       name: "bt_language",
       position: 3,
-      color: '#8700CB'
+      color: '#AF00CC'
     },
     {
       text: "Algoritmo 2",
@@ -33,15 +33,15 @@ export default function HomeScreen() {
       onPress={()=>navigation.navigate('Screen_Alg2')}/>,
       name: "bt_room",
       position: 4,
-      color: '#8700CB'
+      color: '#AF00CC'
     },
     {
       text: "Selección Mejor Algoritmo",
-      icon: <LifebuoyIcon size={30} color='white'
+      icon: <DocumentCheckIcon size={30} color='white'
       onPress={()=>navigation.navigate('SelectionScreen')}/>,
       name: "bt_videocam",
       position: 2,
-      color: '#8700CB'
+      color: '#AF00CC'
     }
   ]
 
@@ -57,7 +57,7 @@ export default function HomeScreen() {
       <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
         <Text className='mb-1 mx-10 text-2xl text-gray-50 text-center'>Competencia Titanic Machine Learning</Text>
           <TouchableOpacity className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600  rounded-full' 
-            onPress={()=>navigation.navigate('FirstScreen')}>
+            onPress={()=>navigation.navigate('First')}>
             <ArrowLeftIcon size={20} color='#AF00CC'/>
           </TouchableOpacity>
       </View>   
@@ -103,7 +103,7 @@ export default function HomeScreen() {
       <View className='absolute pt-[850px] pl-[380px]'>
           <FloatingAction
             actions= {actions}
-            color='#8700CB'
+            color='#AF00CC'
             showBackground= {false}
           /> 
         </View>
