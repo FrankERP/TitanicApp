@@ -7,39 +7,22 @@ import { useState } from 'react'
 import { ArrowLeftIcon } from 'react-native-heroicons/solid'
 import { useNavigation } from '@react-navigation/native'
 import { Dropdown } from 'react-native-element-dropdown';
+import SelectList from 'react-native-dropdown-select-list'
 
 export default function PredictionScreen() {
 
   const [prediction, setPrediction] = useState('')
   const navigation = useNavigation();
 
-  const data_sex = [
-    { label: 'Male', value: 'male' },
-    { label: 'Female', value: 'female' },
-  ];
+  const [selected, setSelected] = useState('')
 
-  const data_title = [
-    { label: 'Mr', value: 'mr' },
-    { label: 'Mrs', value: 'mrs' },
-    { label: 'Miss', value: 'miss' },
-    { label: 'Master', value: 'master' },
-    { label: 'Special', value: 'special' },
-  ];
-
-  const DropdownComponent = () => {
-    const [sex, setSex] = useState(null);
-    const [isFocus1, setIsFocus1] = useState(false);
-
-    const renderLabel = () => {
-      if (sex || isFocus1) {
-        return (
-          <Text style={[styles.label, isFocus1 && { color: 'blue' }]}>
-            Select your gender
-          </Text>
-        );
-      }
-      return null;
-    };
+  const data=[
+    {key:'1', value:'Mr'},
+    {key:'2', value:'Mrs'},
+    {key:'3', value:'Miss'},
+    {key:'4', value:'Master'},
+    {key:'5', value:'VIP'},
+  ]
 
 
 
@@ -81,7 +64,7 @@ export default function PredictionScreen() {
         {({handleChange,handleBlur, handleSubmit, values})=> (
           <View>
             <View>
-              
+              <SelectList data={data} setSelected={setSelected}/>
             </View>
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('sepalLength')}
@@ -123,4 +106,4 @@ export default function PredictionScreen() {
       </Formik>
     </SafeAreaView>
   )
-}
+}}
