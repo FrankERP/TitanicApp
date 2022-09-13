@@ -13,14 +13,14 @@ useLayoutEffect(() => {
 }, [])
 
   return (
-    <SafeAreaView className='pt-10 items-center bg-black h-full w-full'>
+    <SafeAreaView className='pt-10 items-center bg-gray-900 h-full w-full'>
       <View className='px-2 pt-14 flex-1 items-center '>
         <Text className='text-[30px] pb-12 m-4 text-white'>¿Sobrevivirías al Titanic?</Text>
         <Animatable.Image
           source={require('../assets/jackdrowning.gif')}
           animation='slideInUp'
           iterationCount={1}
-          className='h-85 w-85 '
+          className='h-85 w-85'
         />
         <Text className='px-2 pt-5 m-1 text-4xl text-[#8700CB] font-extrabold'>Jack or Rose App</Text>
         <Text className='px-2 pt-2 m-1 text-base text-fuchsia-200 text-justify'>En esta App vas a saber ¿quién de los dos serías?                             Desarrollada por alumnos del Tecnológico de Monterey, Campus Ciudad de México para la materia Inteligencia artificial avanzada para la ciencia de datos I</Text>

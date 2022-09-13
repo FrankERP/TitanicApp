@@ -15,7 +15,7 @@ export default function Screen_Alg1() {
   }, [])
 
   return (
-    <SafeAreaView className='bg-gray-900 flex-1'>
+    <SafeAreaView className='bg-gray-900 flex-1 pt-8'>
       <View>
         <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
           <View>
