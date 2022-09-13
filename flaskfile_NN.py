@@ -44,7 +44,10 @@ def predict():
     Pclass = int(knn.predict([[Age,float(str_features[2])]])[0])
     Fare = pd.DataFrame(np.array([[float(str_features[2])]],dtype='float')).to_numpy(dtype=np.float32).reshape(-1,1)
     Fare = int(sortFare(fareCat.predict(Fare))[0])
-    Title = int(0 if (str_features[3]).lower() == 'mr' else (1 if ((str_features[1].lower() == 'miss') or (str_features[1].lower() == 'mrs')) else 3))
+    Title = int(0 if (str_features[3].lower() == 'mr') else 
+              (1 if (str_features[3].lower() == 'miss') else 
+              (2 if (str_features[3].lower() == 'mrs') else 
+              (3 if  (str_features[3].lower() == 'master') else 4))))
     Relatives = int(str_features[4])
     final_features = np.array([Pclass,Sex,Relatives,Title]).reshape(1,-1)
     prediction = nn.predict(final_features)
