@@ -64,7 +64,17 @@ export default function PredictionScreen() {
         {({handleChange,handleBlur, handleSubmit, values})=> (
           <View>
             <View>
-              <SelectList data={data} setSelected={setSelected}/>
+              <SelectList 
+                data={data} 
+                setSelected={setSelected}
+                boxStyles={{backgroundColor: 'black'}}
+                dropdownTextStyles={{color:'#AF00CC'}}
+                boxTextSyles={{color:'#AF00CC'}}
+
+                inputStyles={{color:'#AF00CC'}}
+                placeholder='Select your title'
+                onSelect={()=>{values.sepalWidth = selected}}
+                />
             </View>
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('sepalLength')}
@@ -106,4 +116,4 @@ export default function PredictionScreen() {
       </Formik>
     </SafeAreaView>
   )
-}}
+}

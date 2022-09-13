@@ -19,7 +19,7 @@ export default function Screen_Alg1() {
       <View>
         <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
           <View>
-            <Text className='text-lg font-bold text-center text-gray-50'>Screen_Alg1</Text>
+            <Text className='text-lg font-bold text-center text-gray-50'>Redes Neuronales</Text>
           </View>
           <TouchableOpacity onPress={navigation.goBack} 
             className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600 rounded-full'>
@@ -30,7 +30,7 @@ export default function Screen_Alg1() {
       <ScrollView>
         <View>
           <Text>
-            
+            Se seleccionó este algoritmo porque 
           </Text>
         </View>
       </ScrollView>
