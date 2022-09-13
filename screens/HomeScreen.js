@@ -2,7 +2,8 @@ import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, Linking 
 import React, {useLayoutEffect} from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FloatingAction } from 'react-native-floating-action';
-import { DocumentMagnifyingGlassIcon, FaceSmileIcon, LifebuoyIcon, ArrowLeftIcon } from 'react-native-heroicons/solid';
+import { DocumentMagnifyingGlassIcon, FaceSmileIcon, LifebuoyIcon } from 'react-native-heroicons/solid';
+import { ArrowLeftIcon } from 'react-native-heroicons/outline'
 
 export default function HomeScreen() {
 
@@ -52,17 +53,19 @@ export default function HomeScreen() {
 
 
   return (
-    <SafeAreaView className='bg-white pt-10'>
-      <ScrollView className='bg-gray-900 flex-1 ' 
+    <SafeAreaView className='bg-gray-900 pt-8 flex-1'>
+      <View className='p-7 border-b border-[#AF00CC] bg-gray-900 shadow-xs'>
+        <Text className='mb-1 mx-10 text-2xl text-gray-50 text-center'>Competencia Titanic Machine Learning</Text>
+          <TouchableOpacity className='absolute top-6 left-5 p-2 bg-gray-900 border border-solid border-purple-600  rounded-full' 
+            onPress={navigation.goBack}>
+            <ArrowLeftIcon size={20} color='#AF00CC'/>
+          </TouchableOpacity>
+      </View>   
+      <ScrollView className='bg-gray-900 flex-1' 
         contentContainerStyle={{
           paddingBottom:50,
         }}>
         <View className='p-2 m-4 items-center'>
-          <Text className='mb-3 mx-8 text-2xl text-white text-center'>Competencia Titanic Machine Learning</Text>
-            <TouchableOpacity className='absolute top-5 left-2 p-3 bg-[#8700CB] rounded-full' 
-            onPress={navigation.goBack}>
-            <ArrowLeftIcon size={20} color='white'/>
-          </TouchableOpacity>
           <Image source={require('../assets/titanicsink.gif')}
           className='h-[200px] w-[300px] rounded-none'/>
           <Text className='mt-3 mb-3 text-sm text-justify text-fuchsia-200'>Usar Machine Learning para encontrar un modelo predictivo que arroje cuáles pasajeros pueden sobrevivir al naufragio del Titanic. El hundimiento del famoso Titanic fue uno de los naufragios más crueles de la historia, el día 15 de abril de 1912, en el transcurso de su primer viaje, el transatlántico que era considerado por su envergadura como insumergible, fue hundido al chocar contra un iceberg. Dado que no se pensaba que fueran a necesitar los botes salvavidas, no hubo suficientes para todos los pasajeros. Aquello resultó en una gran tragedia con 1502 muertos de los 224 pasajeros y tripulantes. Algunas personas o grupos tuvieron mayor probabilidad de sobrevivir, gracias a ciertas condiciones que vamos a predecir construyendo dos modelos predictivos. ¿Qué tipo de pasajero tendría mas probabilidad de sobrevivir?, de acuerdo a datos como: Nombre, Edad, Sexo, Clase socioeconómica, entre otras.</Text>
