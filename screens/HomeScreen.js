@@ -20,7 +20,7 @@ export default function HomeScreen() {
       color: '#AF00CC',
     },
     {
-      text: "Algoritmo 1",
+      text: "Neural Network",
       icon: <DocumentMagnifyingGlassIcon size={30} color='white'
       onPress={()=>navigation.navigate('Screen_Alg1')}/>,
       name: "bt_language",
@@ -28,7 +28,7 @@ export default function HomeScreen() {
       color: '#AF00CC'
     },
     {
-      text: "Algoritmo 2",
+      text: "Random Forest",
       icon: <DocumentMagnifyingGlassIcon size={30} color='white'
       onPress={()=>navigation.navigate('Screen_Alg2')}/>,
       name: "bt_room",
@@ -63,7 +63,7 @@ export default function HomeScreen() {
       </View>   
       <ScrollView className='bg-gray-900 flex-1' 
         contentContainerStyle={{
-          paddingBottom:100,
+          paddingBottom:50,
         }}>
         <View className='p-2 m-4 items-center flex-1'>
         <Image source={require('../assets/titanicsink.gif')}
