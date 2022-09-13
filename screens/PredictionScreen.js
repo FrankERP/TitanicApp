@@ -59,7 +59,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://192.168.1.91:5000/predict',{
+          axios.post('http://172.20.10.13:5000/predict',{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,
@@ -121,10 +121,10 @@ export default function PredictionScreen() {
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
 
-            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction == 1? 'Survived': 'Dead' }</Text>
+            <Text className='text-xl text-fuchsia-200'>The Prediction is: {prediction} {prediction==''?' ':(prediction == 1? 'Survived': 'Dead') }</Text>
           </View>
         ) }
-      </Formik>
+      </Formik> 
     </SafeAreaView>
   )
 } 
