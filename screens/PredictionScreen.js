@@ -59,17 +59,17 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://10.48.187.54:5000/predict',{
+          axios.post('http://192.168.1.91:5000/predict',{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,
             Fare: values.Fare,
             Relatives: values.Relatives,
-          }).then(response => {setPrediction(response.data)}).catch(error => {console.log(error)})}
+          }).then(response => {setPrediction(response.data)}).catch(error => {console.log(error.response.data)})}
 
       >
         {({handleChange,handleBlur, handleSubmit, values})=> (
-          <View>
+          <View>  
             <View>
             <SelectList 
                 data={data_sex} 

@@ -51,7 +51,8 @@ def predict():
     Relatives = int(str_features[4])
     final_features = np.array([Pclass,Sex,Relatives,Title]).reshape(1,-1)
     prediction = RF.predict(final_features)
+    print(str(prediction[0]))
     return str(prediction[0])
 
 if __name__ == "__main__":
-    app.run('10.48.153.241')
+    app.run('192.168.1.91')
