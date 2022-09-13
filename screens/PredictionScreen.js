@@ -81,36 +81,7 @@ export default function PredictionScreen() {
         {({handleChange,handleBlur, handleSubmit, values})=> (
           <View>
             <View>
-            {renderLabel()}
-            <Dropdown
-          style={[styles.dropdown, isFocus1 && { borderColor: 'blue' }]}
-          placeholderStyle={styles.placeholderStyle}
-          selectedTextStyle={styles.selectedTextStyle}
-          inputSearchStyle={styles.inputSearchStyle}
-          iconStyle={styles.iconStyle}
-          data={data}
-          search
-          maxHeight={300}
-          labelField="label"
-          valueField="value"
-          placeholder={!isFocus1 ? 'Select item' : '...'}
-          searchPlaceholder="Search..."
-          value={sex}
-          onFocus={() => setIsFocus1(true)}
-          onBlur={() => setIsFocus1(false)}
-          onChange={item => {
-            setSex(item.value);
-            setIsFocus1(false);
-          }}
-          renderLeftIcon={() => (
-            <AntDesign
-              style={styles.icon}
-              color={isFocus1 ? 'blue' : 'black'}
-              name="Safety"
-              size={20}
-            />
-          )}
-        />
+              
             </View>
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('sepalLength')}
