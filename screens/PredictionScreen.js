@@ -97,7 +97,7 @@ export default function PredictionScreen() {
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('Age')}
               onBlur={handleBlur('Age')}
-              vaue = {values.Age}
+              value = {values.Age}
               placeholder = 'Age'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
@@ -105,7 +105,7 @@ export default function PredictionScreen() {
             <TextInput className='bg-gray-700'
               onChangeText = {handleChange('Fare')}
               onBlur={handleBlur('Fare')}
-              vaue = {values.Fare}
+              value = {values.Fare}
               placeholder = 'Fare'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
@@ -113,7 +113,7 @@ export default function PredictionScreen() {
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('Relatives')}
               onBlur={handleBlur('Relatives')}
-              vaue = {values.Relatives}
+              value = {values.Relatives}
               placeholder = 'Relatives'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
@@ -126,4 +126,4 @@ export default function PredictionScreen() {
       </Formik>
     </SafeAreaView>
   )
-}
+} 
