@@ -61,13 +61,15 @@ export default function HomeScreen() {
             <ArrowLeftIcon size={20} color='#AF00CC'/>
           </TouchableOpacity>
       </View>   
+      <View>
+        <Image source={require('../assets/titanicsink.gif')}
+            className='h-[200px] w-[300px] rounded-none'/>
+      </View>
       <ScrollView className='bg-gray-900 flex-1' 
         contentContainerStyle={{
           paddingBottom:50,
         }}>
         <View className='p-2 m-4 items-center'>
-          <Image source={require('../assets/titanicsink.gif')}
-          className='h-[200px] w-[300px] rounded-none'/>
           <Text className='mt-3 mb-3 text-sm text-justify text-fuchsia-200'>Usar Machine Learning para encontrar un modelo predictivo que arroje cuáles pasajeros pueden sobrevivir al naufragio del Titanic. El hundimiento del famoso Titanic fue uno de los naufragios más crueles de la historia, el día 15 de abril de 1912, en el transcurso de su primer viaje, el transatlántico que era considerado por su envergadura como insumergible, fue hundido al chocar contra un iceberg. Dado que no se pensaba que fueran a necesitar los botes salvavidas, no hubo suficientes para todos los pasajeros. Aquello resultó en una gran tragedia con 1502 muertos de los 224 pasajeros y tripulantes. Algunas personas o grupos tuvieron mayor probabilidad de sobrevivir, gracias a ciertas condiciones que vamos a predecir construyendo dos modelos predictivos. ¿Qué tipo de pasajero tendría mas probabilidad de sobrevivir?, de acuerdo a datos como: Nombre, Edad, Sexo, Clase socioeconómica, entre otras.</Text>
           <Text className='text-sm text-justify text-fuchsia-200'>Es importante lograr un porcentaje alto de predicción, ya que este tipo de eventos ocurre no solo con barcos, también, en aviones, trenes, naves espaciales, entre otros transportes. Además, puede ayudar a predecir y mejorar la seguridad en otros casos como terremotos, huracanes, deslaves u otros desastres naturales. Aunque, los parámetros pueden cambiar, los modelos suelen ser parecidos o al menos es una forma de acercamiento a la resolución del problema.</Text>
         </View>
