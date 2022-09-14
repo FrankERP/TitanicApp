@@ -70,7 +70,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://192.168.0.21:5000/predict'+model,{
+          axios.post('http://10.48.186.242:5000/predict'+model,{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,

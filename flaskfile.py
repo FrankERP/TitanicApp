@@ -63,4 +63,4 @@ def predictNN():
     return msgPred
 
 if __name__ == "__main__":
-    app.run('192.168.0.21')
+    app.run('10.48.186.242')
