@@ -70,7 +70,7 @@ export default function PredictionScreen() {
         }}
         //onSubmit={values => console.log(values)}
         onSubmit={values => 
-          axios.post('http://192.168.1.77:5000/predict'+model,{
+          axios.post('http://10.48.186.242:5000/predict'+model,{
             Sex: values.Sex,
             Title: values.Title,
             Age: values.Age,
@@ -121,6 +121,9 @@ export default function PredictionScreen() {
               placeholder = 'Age'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
+              keyboardType='numeric'
+              enablesReturnKeyAutomatically={true}
+              keyboardAppearance='dark'
             />
             <TextInput className='bg-gray-700'
               onChangeText = {handleChange('Fare')}
@@ -129,6 +132,9 @@ export default function PredictionScreen() {
               placeholder = 'Fare'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
+              keyboardType='numeric'
+              enablesReturnKeyAutomatically={true}
+              keyboardAppearance='dark'
             />
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('Relatives')}
@@ -137,6 +143,9 @@ export default function PredictionScreen() {
               placeholder = 'Relatives'
               placeholderTextColor={'#AF00CC'}
               theme={{colors:{text:'#E381C7'}}}
+              keyboardType='numeric'
+              enablesReturnKeyAutomatically={true}
+              keyboardAppearance='dark'
             />
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
