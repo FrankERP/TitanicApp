@@ -44,7 +44,7 @@ export default function Screen_Alg2() {
           <Text className='mx-8 mb-2 mt-4 text-base text-gray-50'>ROC y AUC</Text>
           <Text className='mt-1 mb-3 text-sm text-justify text-fuchsia-200'>Sabemos que la medida de la matriz no es suficiente para decidir que tan bueno es el modelo, por lo que en la parte de abajo vemos que la curva ROC en azul, sube a un ritmo cercano de tasa positiva cercano a la esquina izquierda. El área bajo la curva (AUC) es de 0.83 lo que nos da un nivel de alta sensitividad y alta especificidad.</Text>
           <Image source={require('../assets/RF_ROC_y_AUC.png')}
-          className='h-[310px] w-[310px] rounded self-center'/>
+          className='h-[280px] w-[345px] rounded self-center'/>
 
           <Text className='mx-8 mb-2 mt-4 text-base text-gray-50'>Puntaje obtenido en Kaggle</Text>
           <Image source={require('../assets/rfkaggle.jpeg')}
