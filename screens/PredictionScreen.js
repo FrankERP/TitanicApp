@@ -88,7 +88,6 @@ export default function PredictionScreen() {
                 boxStyles={{backgroundColor: 'black'}}
                 dropdownTextStyles={{color:'#AF00CC'}}
                 boxTextSyles={{color:'#AF00CC'}}
-
                 inputStyles={{color:'#AF00CC'}}
                 placeholder='Select your model'
                 />
