@@ -7,7 +7,7 @@ Jorge Antonio Hoyo García         A01658142
 
 Instrucciones para abrir contenido:
 Instalar librerias de React Native:
-1. En la carpeta, instala con una terminal poniendo: npm i -g expo-clo
+1. En la carpeta, instala con una terminal poniendo: npm i -g expo-cli
 2. Pedira hacer un npm audit, ejecutar entonces: npm audit fix --force, con esto instalará las librerias necesarias
 3. Ejecutar expo start para obtener código QR y abrir desde el celular
 Ejecutar Flask
