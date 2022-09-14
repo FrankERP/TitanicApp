@@ -124,6 +124,8 @@ export default function PredictionScreen() {
               keyboardType='numeric'
               enablesReturnKeyAutomatically={true}
               keyboardAppearance='dark'
+              maxLength={2}
+              returnKeyType='done'
             />
             <TextInput className='bg-gray-700'
               onChangeText = {handleChange('Fare')}
@@ -135,6 +137,8 @@ export default function PredictionScreen() {
               keyboardType='numeric'
               enablesReturnKeyAutomatically={true}
               keyboardAppearance='dark'
+              maxLength={3}
+              returnKeyType='done'
             />
             <TextInput className='bg-gray-800'
               onChangeText = {handleChange('Relatives')}
@@ -146,6 +150,8 @@ export default function PredictionScreen() {
               keyboardType='numeric'
               enablesReturnKeyAutomatically={true}
               keyboardAppearance='dark'
+              returnKeyType='done'
+              maxLength={2}
             />
             <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
 
